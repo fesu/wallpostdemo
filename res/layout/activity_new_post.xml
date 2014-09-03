@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    tools:context="com.example.wallpostdemo.NewPostActivity"
+    android:orientation="vertical"
+    android:background="@android:color/black" >
+
+    <ScrollView android:id="@+id/scrol_newpost_details"
+        android:layout_width="match_parent"        
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible">
+        
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:orientation="vertical" >
+    
+            <ImageView
+        android:id="@+id/iv_new_post_pic"
+        android:layout_width="match_parent"
+       	android:adjustViewBounds="true"
+        android:layout_height="400dp"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/default_pic_black"
+        android:tag="default_pic" />
+            
+            <!-- <com.ImageDraw.MyImageView android:id="@+id/iv_new_post_pic"
+        android:layout_width="match_parent"
+       	android:adjustViewBounds="true"
+        android:layout_height="400dp"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/default_pic_black"
+        android:tag="default_pic"/> -->
+            
+            <EditText
+                android:id="@+id/edt_new_post_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:hint="Post Title"
+                android:singleLine="true" />
+            
+            <Button
+                android:id="@+id/btn_goto_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Signup"
+                android:textColor="@android:color/background_light"
+                android:background="#009688"
+                 />
+            
+            <Button
+                android:id="@+id/btn_goto_wall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Wall Of Love"
+                android:textColor="@android:color/background_light"
+                android:background="#009688" />
+            
+        </LinearLayout>
+        
+        </ScrollView>
+    
+</RelativeLayout>

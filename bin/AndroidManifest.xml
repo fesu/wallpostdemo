@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.wallpostdemo"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.TranslucentActionBar" >
+        <activity
+            android:name=".WallActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ImageViewerActivity"
+            android:label="@string/title_activity_image_viewer"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TranslucentActionBar.ActionBar.Overlay" >
+        </activity>
+        <activity
+            android:name=".UserRegisterActivity"
+            android:label="@string/title_activity_user_register" >
+        </activity>
+        <activity
+            android:name=".NewPostActivity"
+            android:label="@string/title_activity_new_post" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CustomCameraActivity"
+            android:label="@string/title_activity_custom_camera" >
+        </activity>
+        <activity
+            android:name=".FacebookRequestActivity"
+            android:label="@string/title_activity_facebook_request" >
+            
+        </activity>
+        <activity android:name="com.facebook.LoginActivity" android:label="@string/app_name"></activity><meta-data android:value="@string/app_id" android:name="com.facebook.sdk.ApplicationId"/>
+        
+    </application>
+
+</manifest>

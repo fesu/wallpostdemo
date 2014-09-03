@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/google_card_background"
+    android:descendantFocusability= "blocksDescendants" >
+    
+    <RelativeLayout
+        android:id="@+id/rl_post_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+       <!--  <ImageView 
+           android:id="@+id/iv_profile_pic"
+           android:layout_height="24dp"
+           android:layout_width="24dp"
+           android:layout_alignParentLeft="true" /> -->
+        
+        <com.example.wallpostdemo.RoundedImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_height="48dp"
+           	android:layout_width="48dp"           
+            android:src="@drawable/picnew"
+            android:layout_alignParentLeft="true" />
+        
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:layout_toRightOf="@id/iv_profile_pic"
+            />
+        
+        <TextView
+            android:id="@+id/tv_post_time"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            
+            android:layout_alignParentRight="true"
+             />      
+        
+    </RelativeLayout>
+    
+    <TextView
+            android:id="@+id/tv_post_title"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"            
+            />
+    <RelativeLayout
+        android:id="@+id/relative_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_post_pic"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:maxHeight="350dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/default_pic_loading" />
+    
+    
+    <!-- android:adjustViewBounds="true" for ImageView<ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/> -->
+    
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+         >
+    
+        <Button
+            android:id="@+id/btn_loveit"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+         	android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentLeft="true"
+            android:text="Love It"
+            android:textColor="#009688"            
+            android:drawableLeft="@drawable/loveit_disabled24"
+            android:drawablePadding="5dp"
+            android:background="@android:color/transparent"
+            android:textSize="12sp"                        
+            /> 
+        
+        
+        <TextView
+            android:id="@+id/tv_total_love"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentRight="true"            
+            android:textSize="12sp"
+            android:textColor="#009688"            
+            />
+    
+    </RelativeLayout>
+    
+    
+</LinearLayout>
